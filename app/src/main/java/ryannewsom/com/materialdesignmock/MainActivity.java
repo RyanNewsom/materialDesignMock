@@ -28,7 +28,13 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                        .setAction("Action", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                // This can be null, but it's a callback from interacting with the ac
+                                int x = 2+2;
+                            }
+                        }).show();
             }
         });
 
